@@ -9,10 +9,11 @@ node {
   // #sh 'java -jar /var/lib/jenkins/workspace/Jenkins-Git-Maven-Docker/target/SpringBoot-Jenkins-0.0.1-SNAPSHOT.jar'
  // }
    stage ('Docker Image'){
-   sh 'docker build -t davudocker/springBoot-jenkins-docker:latest .'
+   sh 'docker build -t davudocker/springBoot-jenkinsdocker:latest .'
+   
   }
   stage ('Docker run'){
-   sh 'docker run  -p 8081:8081 -t davudocker/springBoot-jenkins-docker:latest'
+   sh 'docker run  -p 8081:8081 -t davudocker/springBoot-jenkinsdocker:latest'
   }
 
 }
