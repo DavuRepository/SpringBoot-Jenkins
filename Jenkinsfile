@@ -6,7 +6,7 @@ node {
    sh 'mvn clean package'
   }
  // stage ('Run the Spring Boot'){
-   #sh 'java -jar /var/lib/jenkins/workspace/Jenkins-Git-Maven-Docker/target/SpringBoot-Jenkins-0.0.1-SNAPSHOT.jar'
+  // #sh 'java -jar /var/lib/jenkins/workspace/Jenkins-Git-Maven-Docker/target/SpringBoot-Jenkins-0.0.1-SNAPSHOT.jar'
  // }
    stage ('Docker Image'){
    sh 'docker build -t SpringBoot-Jenkins-Docker:1.0 .'
