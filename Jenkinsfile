@@ -4,7 +4,7 @@ node
   {
    cleanWs() 
    stage ('Git Checkout'){
-   git 'https://github.com/DavuRepository/SpringBoot-Jenkins'
+   git branch: 'springbootjenkinsdocker', url: 'https://github.com/DavuRepository/SpringBoot-Jenkins'
   }
   stage ('Maven build') 
   {
