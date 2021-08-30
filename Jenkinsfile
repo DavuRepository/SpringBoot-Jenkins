@@ -1,3 +1,5 @@
+#!groovy
+
 node {
   stage ('Git Checkout'){
    git 'https://github.com/DavuRepository/SpringBoot-Jenkins'
