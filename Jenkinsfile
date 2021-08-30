@@ -20,7 +20,7 @@ node {
   
    stage('Build image') {         
        
-            app = docker.build("davudocker/springBoot-jenkins-docker:0.0.1.RELEASE")    
+            app = docker.build("davudocker/springBoot-jenkins-docker")    
        }     
       stage('Test image') {           
             app.inside {            
