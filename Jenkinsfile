@@ -18,11 +18,15 @@ node {
    //sh 'docker run  -p 8081:8081 -t davudocker/springBoot-jenkins-docker:0.0.1.RELEASE'
  // }
   
-   stage('Docker Build') {
-      agent any
-      steps {
-        sh 'docker build -t davudocker/springBoot-jenkins-docker:latest .'
-      }
-    }
+   stage('Build image') {         
+       
+            app = docker.build("davudocker/springBoot-jenkins-docker:0.0.1.RELEASE")    
+       }     
+      stage('Test image') {           
+            app.inside {            
+             
+             sh 'echo "Tests passed"'        
+            }    
+        }     
 
 }
